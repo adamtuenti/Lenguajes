@@ -22,31 +22,60 @@
     <table border="0">
 	
 	<div class="form-group">
-    <tr><td><label style="font-size: 15pt"><b>Ingresar palabra para busqueda: </b></label></td>
-      <td width=50 class="align-middle"> <input class="form-control" style="border-radius:15px;" require type="text" name="usuario" required placeholder="Dato......"></td></tr>
-	  
+
+
+   
 	  
     </div>
-	<select name="periodico">
-	<option value="1">El Universo</option>
-	<option value="2">El Comercio</option>
 	
+
+	<? 
+
+
+
 	<input type="submit" name="" value="Busca" id="boton1" onclick = "funcion();">
 	
 	
 	<?php
 	
-	function validar($usuario){
+
+    
+	if($_POST["pais"]==1){
 		
-	if(strlen($usuario)>1){
-		echo strlen($usuario);
+			echo "El universo" ;
+			ContarLineas("Procesamiento/archivos_csv_procesados/2018-12_Guayaquil_robo_asalto_delito_universo.csv");
+		}else{
+			echo "El super" ;
+
+
+		}
+
+
+	
+	function ContarLineas($ruta){
+		$linea = 0;
+//Abrimos nuestro archivo
+		$archivo = fopen($ruta, "r");
+		//Lo recorremos
+		while (($datos = fgetcsv($archivo, ",")) == true) 
+		{
+		  $num = count($datos);
+		  $linea++;
+		  //Recorremos las columnas de esa linea
+		 
+		}
+		//Cerramos el archivo
+		fclose($archivo);
+		echo $linea-1;
+
+
 
 	}
-	}
+
+		
+
 	
-	
-	echo "El pais elejido : ".$_POST["periodico"] ;
-	
+
 	?>
      
 	
@@ -85,6 +114,22 @@
     </tr>
     </table>
     </div></center></div></center>
+
+    <?php
+		require_once("phpChart_Lite/conf.php");
+	?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>phpChart - A Basic Chart</title>
+</head>
+<body>
+    
+<?php
+$pc = new C_PhpChartX(array(array(11, 9, 5, 12, 14)),'basic_chart');
+$pc->draw();
+?>
 
   
 </body>

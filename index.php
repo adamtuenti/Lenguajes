@@ -17,9 +17,10 @@
   <table border="0" align="center" valign="middle">
     <tr>
     <td rowspan=5>
-    <form action="validacion.php" method="post">
+   
 
     <table border="0">
+
 
      
 
@@ -28,8 +29,8 @@
 
     
     <tr><td></td>
-		<td width=50 class="align-middle"><p><a class="btn btn-danger" href="estadistica.php">Estadísticas</a></p></td>
-		<td width=50 class="align-middle"><p><a class="btn btn-danger" href="geolocalizacion.php">Geolocalización</a></p></td>
+		<td width=50 class="align-middle"><p><a class="btn btn-danger" href="opcionE.php">Estadísticas</a></p></td>
+		<td width=50 class="align-middle"><p><a class="btn btn-danger" href="opcionG.php">Geolocalización</a></p></td>
 		<td width=50 class="align-middle"><p><a class="btn btn-danger" href="graficas.php">Gráficas</a></p></td>
      
 	  </tr></tr>
