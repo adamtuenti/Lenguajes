@@ -11,7 +11,7 @@
   <title>Proyecto</title>
 </head>
 <body background="/lenguaje/Lenguajes/imagenes/fondoadam.jpg" style="background-attachment: fixed" >
-  <legend  style="font-size: 14pt; color: #8000FF;"><h2 style="color: #FF3333"><center><strong>Estadistica</strong></center></h2></legend>
+  <legend  style="font-size: 14pt; color: #8000FF;"><h2 style="color: #FF3333"><center><strong>Geolocalización</strong></center></h2></legend>
   <fieldset>
   <h3 style="font-size: 20pt; color: #B43104;"><center><strong>Seleccione la categoría que desea ejecutar</strong></center></h3>
     <center><div class="Ingreso">
@@ -24,7 +24,7 @@
     <table border="0">
 
 
-<form name="form1" method="post" action="Estadistica.php">
+<form name="form1" method="post" action="prueba.php">
 <table width="99" border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td>

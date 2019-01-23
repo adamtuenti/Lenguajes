@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="estilos/estilos.css">
   <title>Proyecto</title>
 </head>
-<body background="/fondoadam.jpg" style="background-attachment: fixed" >
+<body background="/lenguaje/Lenguajes/imagenes/fondoadam.jpg" style="background-attachment: fixed" >
   <legend  style="font-size: 14pt; color: #8000FF;"><h2 style="color: #FF3333"><center><strong>Visualizacion de Datos</strong></center></h2></legend>
   <fieldset>
   <h3 style="font-size: 20pt; color: #B43104;"><center><strong>Seleccione la acción a ejecutar</strong></center></h3>
@@ -30,8 +30,8 @@
     
     <tr><td></td>
 		<td width=50 class="align-middle"><p><a class="btn btn-danger" href="opcionE.php">Estadísticas</a></p></td>
-		<td width=50 class="align-middle"><p><a class="btn btn-danger" href="opcionG.php">Geolocalización</a></p></td>
-		<td width=50 class="align-middle"><p><a class="btn btn-danger" href="graficas.php">Gráficas</a></p></td>
+		<td width=50 class="align-middle"><p><a class="btn btn-danger" href="opcionGeo.php">Geolocalización</a></p></td>
+		<td width=50 class="align-middle"><p><a class="btn btn-danger" href="opcionG.php">Gráficas</a></p></td>
      
 	  </tr></tr>
 </fieldset>

@@ -1,40 +1,37 @@
 <!DOCTYPE html>
+<?php
+
+echo "Opcion elegida : ".$_POST["palabra"] ;
+
+?>
 <html>
-<head>
- <title> INSERTAR MAPA EN GOOGLE MAPS</title>
-
-
- <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBjQ7kwpIvv1sEqFSvGThZfFYV03gP2hGc&callback=initMap"> </script>
-
- <script>
-
-function init(){
-   var mapOption = {
-     center: new google.maps.LatLng(0.0, 0.0), 
-     zoom: 15,
-     mapTypeId:google.maps.MapTypeId.ROADMAP
-   };
-   var map = new google.maps.Map(document.getElementById("map"),mapOption);
-
-   // Define tu marcador (pon la url de tu imagen en la propiedad **icon**)
-   var marker = new google.maps.Marker({
-      position: { lat: -12.06244, lng: -77.12272 }, // aca defines las coordenadas
-      icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-   });
-   // Agregar tu marcador al mapa
-   marker.setMap(map);
-}
-
-  google.maps.event.addDomListener(window, 'load', init);
-
- </script>
-
-
+  <head>
+    <style>
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
   </head>
   <body>
-
-  <div id="map" style="width:1000px; height: 800px; border: solid; border-color: #00FFFF  "></div>
-
-
-</body>
-</html>﻿
+    <h3><center>Ubicacion de la ciudad con la mayor delincuencia</center></h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+	// Initialize and add the map
+	function initMap() {
+	  // The location of Uluru
+	  var uluru = {lat: -2.2058400, lng: -79.9079500};
+	  // The map, centered at Uluru
+	  var map = new google.maps.Map(
+		  document.getElementById('map'), {zoom: 8, center: uluru});
+	  // The marker, positioned at Uluru
+	  var marker = new google.maps.Marker({position: uluru, map: map});
+	}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2H4Ki-Jv1pgrmdn-2GIpMA385CL791OI&callback=initMap">
+    </script>
+  </body>
+</html>
